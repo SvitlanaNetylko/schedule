@@ -1,0 +1,277 @@
+$var1: #F08080
+
+body
+	margin: 0
+	color: white
+	font-size: 15px
+
+.container 
+	background: url(..
+	margin: 0
+	display: grid
+	grid-template-columns: auto
+	grid-template-rows: auto
+	grid-template-areas: "header header header header"
+        "main main main sidebar"
+        "about about about about"
+        "add add add add"
+        "blog blog blog blog"
+
+
+/*background: url(../images/header.jpg) center no-repeat;*/
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main sidebar"
+        "about about about about"
+        "add add add add"
+        "blog blog blog blog"
+        /*"autorization autorization autorization autorization"*/
+        "footer footer footer footer";
+
+}
+
+.header1 {
+    background: url(../images/header3.jpg) center  no-repeat;
+    grid-area: header1;
+    min-height: 100px;
+}
+
+.header {
+    background: url(../images/header3.jpg) no-repeat;
+    display: grid;
+    margin: 0;
+
+    min-height: 700px;
+
+    grid-area: header;
+
+}
+
+.logo {
+    margin: 0 0 500px;
+    display: inline-grid;
+    font-size: 17px;
+    font-weight: 700;
+    align-self: center;
+}
+
+.blog {
+    grid-area: blog;
+    min-height: 200px;
+    text-align: center;
+
+}
+
+
+
+.footer {
+    background: url(../images/header3.jpg);
+    margin: 0;
+    font-family:  'Gloria Hallelujah', cursive;
+    min-height: 90px;
+    grid-area: footer;
+    text-align:left;
+}
+
+.p {
+    margin: 15px;
+}
+.ad {
+    margin: 15px;
+}
+
+.content {
+    /*background: url(../images/header5.jpg) center no-repeat;*/
+    margin: 0;
+    font-family:  'Gloria Hallelujah', cursive;
+    min-height: 10px;
+
+    grid-area: main;
+    text-align: center;
+    color: darkviolet;
+}
+
+.sidebar {
+    background-color: white;
+    /*background: purl(../images/header3.jpg) center no-repeat;**/
+
+.header1
+	background: url(..
+	grid-area: header1
+	min-height: 100px
+
+.header
+	background: url(..
+	display: grid
+	margin: 0
+	min-height: 700px
+	grid-area: header
+
+.logo
+	margin: 0 0 500px
+	display: inline-grid
+	font-size: 17px
+	font-weight: 700
+	align-self: center
+
+.blog
+	grid-area: blog
+	min-height: 200px
+	text-align: center
+
+.footer
+	background: url(..
+	margin: 0
+	font-family: 'Gloria Hallelujah', cursive
+	min-height: 90px
+	grid-area: footer
+	text-align: left
+
+.p
+	margin: 15px
+
+.ad
+	margin: 15px
+
+.content
+	background: url(..
+	margin: 0
+	font-family: 'Gloria Hallelujah', cursive
+	min-height: 10px
+	grid-area: main
+	text-align: center
+	color: darkviolet
+
+.sidebar
+	background-color: white
+	background: purl(..
+	margin: 0
+	font-family: 'Gloria Hallelujah', cursive
+	min-height: 500px
+	grid-area: sidebar
+	text-align: center
+	color: darkviolet
+
+.about
+	text-align: center
+	background: url(..
+	grid-area: about
+	min-height: 500px
+	font-family: 'Gloria Hallelujah', cursive
+	color: darkviolet
+	line-height: 0.1
+	font-size: 14px
+
+.add
+	background: white
+	min-height: 50px
+	grid-area: add
+
+.text1
+	margin: 50px
+	border: 60px
+	padding: 60px
+	font-size: 25px
+	line-height: 0.1
+
+.logo
+	margin: 0
+	padding: 0
+	border: 0
+	text-align: center
+	font-family: 'Gloria Hallelujah', cursive
+	font-size: 50px
+
+.nav
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 17px
+	text-transform: uppercase
+	text-align: center
+	font-family: 'Gloria Hallelujah', cursive
+	&_link
+		margin: 0
+		padding: 0
+		border: 0
+		display: inline-grid
+		text-align: center
+		margin: 0 10px
+		position: relative
+		color: white
+		text-decoration: none
+		top: 50%
+		transition: color .2s linear
+		&:after
+			content: ""
+			display: grid
+			width: 100%
+			height: 3px
+			background-color: @var1
+			opacity: 0
+			position: absolute
+			top: 100%
+			left: 0
+			z-index: 1
+			transition: opacity .2s linear
+
+		&:hover
+			color: @var1
+			&:after
+				opacity: 1
+
+
+
+
+a
+	text-decoration: none
+	outline: none
+	display: inline-block
+	padding: 20px 30px
+	margin: 10px 20px
+	position: relative
+	color: darkviolet
+	border: 3px solid rgba(255,255,255,.4)
+	background: none
+	font-weight: 1000
+	font-family: 'Montserrat', sans-serif
+	text-transform: uppercase
+	letter-spacing: 2px
+	&:before, &:after
+		content: ""
+		position: absolute
+		width: 0
+		height: 0
+		opacity: 0
+
+	&:before
+		bottom: 0
+		left: 0
+		border-left: 2px solid darkviolet
+		border-top: 2px solid darkviolet
+		transition: 0s ease opacity .8s, .2s ease width .4s, .2s ease height .6s
+
+	&:after
+		top: 0
+		right: 0
+		border-right: 2px solid darkviolet
+		border-bottom: 2px solid darkviolet
+		transition: 0s ease opacity .4s, .2s ease width , .2s ease height .2s
+
+	&:hover:before, &:hover:after
+		height: 100%
+		width: 100%
+		opacity: 1
+
+	&:hover:before
+		transition: 0s ease opacity 0s, .2s ease height, .2s ease width .2s
+
+	&:hover:after
+		transition: 0s ease opacity .4s, .2s ease height .4s , .2s ease width .6s
+
+	&:hover
+		background: rgba(255,255,255,.2)
