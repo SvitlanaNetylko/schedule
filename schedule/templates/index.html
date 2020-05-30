@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
@@ -34,9 +35,12 @@
             <p>Press the button</p>
             <p>and start creation</p>
 
-            <a href="indexCreate.html">Create</a>
+            <a href="#" id="create">Create</a>
+            <div id="more-text-here1"></div>
+            <div id="more-text-here2"></div>
+            <!--<a href="indexCreate.html">Create</a>
             <a href="login.html">
-            Login</a>
+            Login</a>-->
 
             <p>input your pasword or</p>
             <p>register if you open</p>
@@ -81,6 +85,24 @@
             <h5 class="ad">Adress : </h5>
         </div>
     </div>
+
+    <script>
+    window.addEventListener("load", function(){
+      var request = new XMLHttpRequest();
+      request.open('GET', Math.random(), true);
+      request.addEventListener('readystatechange', function(){
+        if((request.readyState==4) && (request.status==200)){
+          console.log(request);
+          console.log(request.responseText);
+          var index = document.getElementById('create');
+          create.innerHTML = request.responseText;
+        }
+      });
+      request.send();
+    });
+
+
+    </script>
 
 
 

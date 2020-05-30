@@ -25,6 +25,7 @@ from classschedule import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^classsched/', views.classsched_subjects, name='classsched_subjects'),
+    url(r'^classschedule/', views.classsched_subjects, name='classsched_subjects'),
     url(r'^admin/', admin.site.urls),
+    url(r'^ajax/$', views.add_ajax),
 ]
