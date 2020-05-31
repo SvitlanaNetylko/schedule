@@ -94,7 +94,7 @@
         if((request.readyState==4) && (request.status==200)){
           console.log(request);
           console.log(request.responseText);
-          var index = document.getElementById('create');
+          var create = document.getElementById('create', get);
           create.innerHTML = request.responseText;
         }
       });

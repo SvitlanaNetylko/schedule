@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-#from django.urls import path
+from django.urls import path
 
 #urlpatterns = [
 #    path('admin/', admin.site.urls),
@@ -22,10 +22,12 @@ from django.contrib import admin
 from django.conf.urls import url
 
 from classschedule import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
-    url(r'^classschedule/', views.classsched_subjects, name='classsched_subjects'),
+    #url(r'^classschedule/', views.classsched_subjects, name='classsched_subjects'),
     url(r'^admin/', admin.site.urls),
-    url(r'^ajax/$', views.add_ajax),
+    path('', TemplateView.as_view(template_name='index.html')),
+    #url(r'^ajax/$', views.add_ajax),
 ]

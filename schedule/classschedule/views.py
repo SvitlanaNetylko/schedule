@@ -4,6 +4,7 @@ from .models import newSchedule
 from django.shortcuts import redirect
 
 from django.http import Http404, JsonResponse
+
 #доданий код
 #from rest_framework import serializer
 #from rest_framework.decorators import api_views
@@ -18,10 +19,10 @@ def classsched_subjects(request, pk):
     classschedule = newSchedule.objects.get(pk=pk)
     return render(request, 'indexCreate.html')
 
-def add_ajax(request):
-    if request.is_ajax():
-        response = {'first-text': 'Lorem Ipsum is simply dummy text', 'second-text': 'to make a type specimen book. It has '}
-
-        return JsonResponse(response)
-    else:
-        raise Http404
+#def add_ajax(request):
+#    if request.is_ajax():
+#        response = {'first-text': 'Lorem Ipsum is simply dummy text', 'second-text': 'to make a type specimen book. It has '}
+#
+#        return JsonResponse(response)
+#    else:
+#        raise Http404
