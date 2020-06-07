@@ -24,10 +24,12 @@ from django.conf.urls import url
 from classschedule import views
 from django.views.generic import TemplateView
 
+
 urlpatterns = [
     url(r'^$', views.home, name='home'),
     #url(r'^classschedule/', views.classsched_subjects, name='classsched_subjects'),
     url(r'^admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
+    path('', TemplateView.as_view(template_name='../reactapp/public/index.html')),
     #url(r'^ajax/$', views.add_ajax),
+    url(r'^new/schedule/$', views.scheduleCreate.as_view(), name='scheduleCreate'),
 ]

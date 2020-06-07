@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat|Montserrat+Subrayada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kaushan+Script|Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Schedule</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+      <div className="header">
+          <div className="logo">Schedule</div>
+          <div className="nav">
+              <b className="nav_link" href="#">About</b>
+              <b className="nav_link" href="#">Service</b>
+              <b className="nav_link" href="#">Blog</b>
+              <b className="nav_link" href="#">Work</b>
+              <b className="nav_link" href="#">Contact</b>
+          </div>
+      </div>
+
+      <h1></h1>
+      <h1>Create new schedule</h1>
+      <p>Press the button</p>
+      <p>and start creation</p>
+
+      <a type="button" href="#" id="CreateButton">Create</a>
+
+      <a type="button" href={"#"} id="LoginButton">Login</a>
+
+      
+
+
+      <p>input your pasword or</p>
+      <p>register if you open</p>
+      <p>this page for the first time</p>
+
+      </div>
+      <div class="sidebar">
+      <h3>Other</h3>
+        <span className="close">&times;</span>
+        <h1></h1>
+        <a href="">Edit</a>
+        <h1></h1>
+        <a href="">Share</a>
+        <h1></h1>
+        <a href="">Open old</a>
+        <h1></h1>
+      </div>
+
+
+
+      <div class="about">
+      <h2 class="text1">About our service :</h2>
+      <p>A service that will</p><p>become an indispensable assistant for an education worker:</p><p> a university teacher, college or teacher at school!</p><p>Create you`r perfect shedule</p><p>easy without problems!!!
+      </p>
+
+
+
+      </div>
+
+      <div class="add">
+
+      </div>
+
+      <div class="blog">
+      <img src="../static/images/346.png" hspace="100"></img>
+      <img src="../static/images/347.png" hspace="100"></img>
+      <img src="../static/images/348.png" hspace="100"></img>
+      </div>
+
+      <div class="footer">
+      <h5 class="p">Phone : </h5>
+      <h5 class="ad">Adress : </h5>
+      </div>
+    </div>
+
+    <script>
+    window.addEventListener("load", function(){
+      var request = new XMLHttpRequest();
+      request.open('GET', Math.random(), true);
+      request.addEventListener('readystatechange', function(){
+        if((request.readyState==4) && (request.status==200)){
+          console.log(request);
+          console.log(request.responseText);
+          var create = document.getElementById('create', get);
+          create.innerHTML = request.responseText;
+        }
+      });
+      request.send();
+    });
+
+
+    </script>
+
+
+
+</body>
+</html>

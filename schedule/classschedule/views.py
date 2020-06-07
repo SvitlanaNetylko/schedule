@@ -5,6 +5,10 @@ from django.shortcuts import redirect
 
 from django.http import Http404, JsonResponse
 
+from .forms import scheduleForms
+
+from django.views.generic import View
+
 #доданий код
 #from rest_framework import serializer
 #from rest_framework.decorators import api_views
@@ -13,11 +17,24 @@ from django.http import Http404, JsonResponse
 
 def home(request):
     classschedule = newSchedule.objects.all()
-    return render(request, 'index.html')
+    return render(request, 'index.html', context={'classschedule' : classschedule})
+
+
 # Create your views here.
 def classsched_subjects(request, pk):
     classschedule = newSchedule.objects.get(pk=pk)
     return render(request, 'indexCreate.html')
+
+class scheduleCreate(View):
+    def get(self, request):
+        form = scheduleForms()
+        return render(request, 'index.html', context={'form':form})
+
+    def post(request):
+        form = scheduleForms()
+        return render(request, 'index.html', {'form':form})
+
+
 
 #def add_ajax(request):
 #    if request.is_ajax():

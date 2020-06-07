@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'classschedule',
     'rest_framework',
+    'widget_tweaks',
+    'schedule'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +67,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                #'apps.core.context_processors.settings',
+                #'apps.core.context_processors.appointment_form',
+                #'apps.courses.context_processors.courses_categories',
             ],
         },
     },
